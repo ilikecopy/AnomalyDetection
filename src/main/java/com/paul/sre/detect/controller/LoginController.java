@@ -9,10 +9,25 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.paul.sre.detect.service.IAccountService;
+import com.paul.sre.detect.service.impl.AccountServiceImpl;
 import com.paul.sre.detect.vo.AccountValidationResult;
 import com.paul.sre.detect.vo.LoginForm;
 import com.paul.sre.detect.vo.Response;
 
+/**
+ *  MVC
+ *  M: model
+ *  V: View
+ *  C: controller
+ *  
+ *  GET /login?userName=abc&password=afddas http1.1
+ *  
+ *  
+ *  
+ *  
+ * @author win
+ *
+ */
 @Controller
 public class LoginController {
 
@@ -25,6 +40,7 @@ public class LoginController {
 	public String login(LoginForm form) {
 		logger.info("get login POST request");
 		logger.info("user name: {}, password: {}", form.getUserName(), form.getPassword());
+		//TODO ...
 		return "redirect:/index.html";
 	}
 	
