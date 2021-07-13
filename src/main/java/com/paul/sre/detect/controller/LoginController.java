@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.paul.sre.detect.service.IAccountService;
-import com.paul.sre.detect.service.impl.AccountServiceImpl;
 import com.paul.sre.detect.vo.AccountValidationResult;
 import com.paul.sre.detect.vo.LoginForm;
 import com.paul.sre.detect.vo.Response;
@@ -49,7 +48,7 @@ public class LoginController {
 		logger.info("get validateUserName GET request");
 		logger.info("validate user name: {}", userName);
 		AccountValidationResult result = this.accountService.validateAccountName(userName);
-		
+		logger.error("validate user name: {}", userName);
 		return new Response(0, result);
 	}
 }

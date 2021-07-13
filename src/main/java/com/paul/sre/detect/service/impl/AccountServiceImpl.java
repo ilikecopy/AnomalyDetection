@@ -3,6 +3,8 @@ package com.paul.sre.detect.service.impl;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
@@ -11,6 +13,8 @@ import com.paul.sre.detect.vo.AccountValidationResult;
 
 @Service
 public class AccountServiceImpl implements IAccountService {
+	
+	private static final Logger logger = LogManager.getLogger(AccountServiceImpl.class);
 	
 	public static final Pattern ACCOUNT_NAME_PATTERN = Pattern.compile("[a-zA-Z][\\w]{4,9}");
 	

@@ -1,7 +1,6 @@
 #FROM openjdk:8-jdk-alpine
 FROM alpine:latest
 
-
 ENV JAVA_HOME="/usr/lib/jvm/default-jvm/"
 RUN apk add openjdk11
 
