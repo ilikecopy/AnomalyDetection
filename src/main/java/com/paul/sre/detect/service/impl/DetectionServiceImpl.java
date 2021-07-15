@@ -34,6 +34,7 @@ public class DetectionServiceImpl implements IDetectionService {
 		return detectAnoms.anomalyDetection(timestamps, series);
 	}
 
+	@Override
 	public ANOMSResult check(long[] timestamps, double[] series) {
 		return this.check(0.49, 30, 1.05, 0.05, timestamps, series);
 	}

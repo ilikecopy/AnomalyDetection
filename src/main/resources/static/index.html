@@ -5,6 +5,7 @@
 	<title>welcome to anomaly detection tool</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap5.0.2/css/bootstrap.min.css" />
 	<script type="text/javascript" src="bootstrap5.0.2/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -43,26 +44,39 @@
 		<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" style="margin:5px;">
 			<div class="row" style="margin:5px;">
 				<div class="col-sm-5">
-					<input type="text" class="form-control" placeholder="prometheus server" aria-label="promServer">
+					<input type="text" class="form-control" placeholder="prometheus server" aria-label="promServer" id="endpoint">
 				</div>
 				<div class="col-sm">
-					<input type="text" class="form-control" placeholder="start" aria-label="start">
+					<input type="text" class="form-control" placeholder="start" aria-label="start" id="start">
 				</div>
 				<div class="col-sm">
-					<input type="text" class="form-control" placeholder="end" aria-label="end">
+					<input type="text" class="form-control" placeholder="end" aria-label="end" id="end">
 				</div>
 			</div>
 			<div class="row" style="margin:5px;">
 				<div class="col-sm-8">
-					<input type="text" class="form-control" placeholder="promQL" aria-label="promql">
+					<input type="text" class="form-control" placeholder="promQL" aria-label="promql" id="query">
 				</div>
 				<div class="col-sm">
-					<input type="text" class="form-control" placeholder="step" aria-label="step">
+					<input type="text" class="form-control" placeholder="step" aria-label="step" id="step">
 				</div>
 			</div>
-			<button type="button" class="btn btn-primary">Submit</button>
+			<button type="button" class="btn btn-primary" id="fetchSubmit">Submit</button>
 		</div>
 	</div>
+	
+	<script type="text/javascript">
+		$("#fetchSubmit").click(function(){
+			const endpoint = $("#endpoint").val();
+			const query = $("#query").val();
+			const start = $("#start").val();
+			const end = $("#end").val();
+			const step = $("#step").val();
+			
+			const url = "";
+			$.post()
+		});
+	</script>
 </body>
 
 </html>
