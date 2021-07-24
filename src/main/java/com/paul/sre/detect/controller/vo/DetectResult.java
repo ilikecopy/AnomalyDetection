@@ -4,6 +4,9 @@ public class DetectResult {
 	private boolean hasAnomaly;
 	private long[] anomalyIndex;
 	private double[] anomalyScore;
+	private long[] timestamps;
+	private double[] series;
+	
 	public boolean isHasAnomaly() {
 		return hasAnomaly;
 	}
@@ -21,5 +24,17 @@ public class DetectResult {
 	}
 	public void setAnomalyScore(double[] anomalyScore) {
 		this.anomalyScore = anomalyScore;
+	}
+	public long[] getTimestamps() {
+		return timestamps;
+	}
+	public void setTimestamps(long[] timestamps) {
+		this.timestamps = timestamps;
+	}
+	public double[] getSeries() {
+		return series;
+	}
+	public void setSeries(double[] series) {
+		this.series = series;
 	}
 }

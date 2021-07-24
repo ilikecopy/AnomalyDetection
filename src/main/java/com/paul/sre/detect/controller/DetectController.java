@@ -39,9 +39,10 @@ public class DetectController {
 		ANOMSResult detectResult = this.detectService.check(convertedData.getTimestamps(), convertedData.getSeries());
 		
 		DetectResult result = new DetectResult();
+		result.setTimestamps(convertedData.getTimestamps());
+		result.setSeries(convertedData.getSeries());
 		if (null != detectResult && null != detectResult.getAnomsIndex() && detectResult.getAnomsIndex().length > 0) {
 			logger.info(detectResult.getAnomsIndex().length);
-			logger.info(detectResult.getAnomsScore().length);
 			result.setHasAnomaly(true);
 			result.setAnomalyIndex(detectResult.getAnomsIndex());
 			result.setAnomalyScore(detectResult.getAnomsScore());
