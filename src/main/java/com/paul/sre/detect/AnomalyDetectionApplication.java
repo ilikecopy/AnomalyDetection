@@ -21,6 +21,8 @@ import org.springframework.web.client.RestTemplate;
 public class AnomalyDetectionApplication {
 
 	public static void main(String[] args) {
+		
+		
 		SpringApplication.run(AnomalyDetectionApplication.class, args);
 	}
 	
